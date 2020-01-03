@@ -10,4 +10,4 @@ Activate the plugin from within your WordPress Administrator-area in Plugins > I
 
 ## Configuration
 
-On line 23 of caos-google-optimize.php you can configure your Google Optimize ID.
+On line 23 of `caos-google-optimize.php` you can configure your Google Optimize ID.
