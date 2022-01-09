@@ -32,7 +32,7 @@ function do_optimize()
     );
 }
 
-add_filter('caos_extensions_settings_content', 'do_optimize', 180);
+add_filter('caos_extensions_settings_content', 'do_optimize', 80);
 
 
 /**
