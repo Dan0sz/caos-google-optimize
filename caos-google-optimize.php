@@ -4,7 +4,7 @@
  * Plugin Name: CAOS Google Optimize
  * Description: This extension allows you to measure your Google Optimize A/B test results in CAOS.
  * Version: 1.0.1
- * Author: Daan from FFW.Press
+ * Author: Daan from Daan.dev
  * Author URI: https://daan.dev
  * License: GPL2v2 or later
  * Text Domain: host-analyticsjs-local
