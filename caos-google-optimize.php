@@ -59,25 +59,12 @@ function caos_go_process_setting()
         return;
     }
 
-    $js_file = \CAOS\Plugin::get(\CAOS\Admin\Settings::CAOS_ADV_SETTING_JS_FILE);
+    add_filter(
+        'caos_gtag_config', function ($config, $tracking_id) use ($optimize_id) {
+            return $config + ['optimize_id' => $optimize_id];
+        }, 10, 2
+    );
 
-    if ($js_file === 'gtag.js' || $js_file === 'gtag-v4.js') {
-        add_filter(
-            'caos_gtag_config', function ($config, $tracking_id) use ($optimize_id) {
-                return $config + ['optimize_id' => $optimize_id];
-            }, 10, 2
-        );
-    } else {
-        add_filter(
-            'caos_analytics_before_send', function ($config) use ($optimize_id) {
-                $option = [
-                'optimize' => "ga('require', '$optimize_id');"
-                ];
-
-                return $config + $option;
-            }
-        );
-    }
 }
 
 add_action('caos_process_settings', 'caos_go_process_setting');
